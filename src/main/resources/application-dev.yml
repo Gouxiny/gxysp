@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  
+spring:  datasource:    username: root
+    password: gxy8023+
+    url: jdbc:mysql://cdb-j9yaolok.bj.tencentcdb.com:10171/gxy?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf-8
+    hikari:      driver-class-name: com.mysql.jdbc.Driver
+      
+mybatis:
+  mapper-locations:  - classpath:mapping/*Mapper.xml
+  type-aliases-package: com.gouxy.entity
