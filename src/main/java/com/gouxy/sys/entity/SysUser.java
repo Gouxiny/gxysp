@@ -9,4 +9,5 @@ public class SysUser {
 	private String sysUserName;
 	private String sysUserPs;
 	private String tel;
+	private String status;
 }

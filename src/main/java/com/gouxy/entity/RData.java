@@ -17,9 +17,14 @@ public class RData extends HashMap implements Map {
     HttpServletRequest request;
     public RData(HttpServletRequest request){
         this.request = request;
+        // 以键值对的形式获取页面提交的参数(键为String,值为String类型数组)
+        // 将request.getParameterMap()转化成可操作的普通类
         Map properties = request.getParameterMap();
         Map returnMap = new HashMap();
+        // properties.entrySet() 把(key-value)作为一个整体一对一对的存放在Set集合中
+        // 通过 .iterator() 迭代器将数据以（key-value）形式取出
         Iterator entries = properties.entrySet().iterator();
+        // Entry 是Map声明的一个内部接口类，此接口为广泛，定义为Entry。它表示Map中的一个实体（一个key-value对），含有 getKey(),getValue()。getKey()返回条目、getValue()返回条目的值
         Entry entry;
         String name = "";
         String value = "";
@@ -29,6 +34,7 @@ public class RData extends HashMap implements Map {
             Object valueObj = entry.getValue();
             if(null == valueObj){
                 value = "";
+            //  instanceof 为java关键字，严格来说是一个双目运算，用来判断一个对象是否为一个类的实例
             }else if(valueObj instanceof String[]){
                 String[] values = (String[])valueObj;
                 for(int i=0;i<values.length;i++){
