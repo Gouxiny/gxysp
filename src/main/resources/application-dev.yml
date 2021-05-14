@@ -5,7 +5,9 @@ spring:  datasource:    username: root
     password: gxy8023+
     url: jdbc:mysql://cdb-j9yaolok.bj.tencentcdb.com:10171/gxy?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf-8
     hikari:      driver-class-name: com.mysql.jdbc.Driver
+      max-lifetime: 500000
       
 mybatis:
   mapper-locations:  - classpath:mapper/*/*.xml
-  type-aliases-package: com.gouxy.entity,com.gxy.model,com.gxy.form
+  type-aliases-package: com.gouxy.entity,com.gouxy.model,com.gxy.form,com.gouxy.sys.entity
+  configuration.map-underscore-to-camel-case: true

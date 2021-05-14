@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.gouxy.sys.dao.SysUserDao">
 	
-	<insert id="addSysUser" parameterType="SysUser">
-		insert into sysUser (username,password,name,status) values(#{username},#{password},#{name},#{status})
+	<insert id="addSysUser"  parameterType="SysUser">
+		insert into SYS_USER (username,password,name,status) values(#{username},#{password},#{name},#{status})
 	</insert>
 	
-	<select id="showSysUser" resultType="SysUser">
-		select * from sysUser
+	<select id="showSysUser"  resultType="SysUser">
+		select * from SYS_USER where user_id = 9
 	</select>
 
 </mapper>
