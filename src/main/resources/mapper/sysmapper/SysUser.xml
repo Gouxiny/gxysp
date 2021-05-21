@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.gouxy.sys.dao.SysUserDao">
 	
-	<insert id="addSysUser"  parameterType="SysUser">
-		insert into SYS_USER (username,password,name,status) values(#{username},#{password},#{name},#{status})
+	<insert id="addSysUser"  parameterType="SysForm">
+		insert into SYS_USER (username,password,name,status,gender,talkme,mail) values(#{username},#{password},#{name},#{status},#{gender},#{desc},#{mail})
 	</insert>
 	
 	<select id="showSysUser"  resultType="SysUser">

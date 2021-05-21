@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8087
   
 spring:  datasource:    username: root
     password: gxy8023+
@@ -9,5 +9,5 @@ spring:  datasource:    username: root
       
 mybatis:
   mapper-locations:  - classpath:mapper/*/*.xml
-  type-aliases-package: com.gouxy.entity,com.gouxy.model,com.gxy.form,com.gouxy.sys.entity
+  type-aliases-package: com.gouxy.entity,com.gouxy.model,com.gxy.form,com.gouxy.sys.entity,com.gouxy.sys.form
   configuration.map-underscore-to-camel-case: true

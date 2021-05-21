@@ -5,9 +5,12 @@ import lombok.Data;
 @Data
 public class SysUser {
 
-	private String sysUserId;
-	private String sysUserName;
-	private String sysUserPs;
-	private String tel;
+	private String username;
+    private String password;
+    private String departmentId;
+    private String name;
 	private String status;
+	private String gender;
+    private String desc;
+    private String mail;
 }

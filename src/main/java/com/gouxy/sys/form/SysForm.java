@@ -9,5 +9,8 @@ public class SysForm {
     private String password;
     private String departmentId;
     private String name;
+    private String gender;
     private int status;
+    private String desc;
+    private String mail;
 }

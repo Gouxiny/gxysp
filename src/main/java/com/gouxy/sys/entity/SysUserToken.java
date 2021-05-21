@@ -7,11 +7,11 @@ import lombok.Data;
 @Data
 public class SysUserToken {
 
-	private String sysUserId;
+	private String UserId;
 	private String token;
 	//过期时间
-	private Date exipretime;
+	private Date expireTime;
 	//更新时间
-	private Date updatetime;
+	private Date updateTime;
 	
 }

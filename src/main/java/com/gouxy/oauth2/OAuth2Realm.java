@@ -53,10 +53,10 @@ public class OAuth2Realm extends AuthorizingRealm {
         //查询用户信息
         SysUserToken userToken = shiroService.queryByToken(accessToken);
         //token失效
-        if(userToken == null || userToken.getExipretime().getTime() < System.currentTimeMillis()){
+        if(userToken == null || userToken.getExpireTime().getTime() < System.currentTimeMillis()){
             throw new IncorrectCredentialsException("token失效，请重新登录");
         }
-        SysUser user = shiroService.queryUser(userToken.getSysUserId());
+        SysUser user = shiroService.queryUser(userToken.getUserId());
 
         if(user.getStatus() == "0"){
             throw new LockedAccountException("账号已被锁定,请联系管理员");
